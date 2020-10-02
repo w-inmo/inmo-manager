@@ -1,19 +1,36 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+    <div id="app">
+        <router-view></router-view>
     </div>
-    <router-view/>
-  </div>
 </template>
 
+<script>
+
+    import Http from './utils/http'
+
+    export default {
+        name: 'App'
+    }
+
+</script>
+
 <style lang="stylus">
-#app
-  font-family Avenir, Helvetica, Arial, sans-serif
-  -webkit-font-smoothing antialiased
-  -moz-osx-font-smoothing grayscale
-  text-align center
-  color #2c3e50
-  margin-top 60px
+
+    @import '~@/assets/styles/global.styl'
+
+    *
+        padding 0
+        margin 0
+
+    html,
+    body
+        width 100%
+        height 100vh
+        font-size 62.5%
+        background-color #f2f2f2
+
+    #app
+        width 100%
+        height 100%
+
 </style>
