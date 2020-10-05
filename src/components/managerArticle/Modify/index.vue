@@ -4,10 +4,10 @@
         :title="article.title"
         width="60%">
         <modify-form class="modify-form" :form="article"></modify-form>
-        <span slot="footer" class="dialog-footer">
+        <div slot="footer" class="dialog-footer">
             <el-button @click="$emit('close')">取 消</el-button>
             <el-button type="primary" @click="onCommit">修改</el-button>
-        </span>
+        </div>
     </el-dialog>
 </template>
 
@@ -25,11 +25,6 @@
         },
         components: {
             ModifyForm
-        },
-        watch: {
-            modifyData(val) {
-                if (val) val.tags = val.tags.split(',')  
-            }
         },
         computed: {
             visible: {

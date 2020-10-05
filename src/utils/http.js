@@ -33,6 +33,9 @@ class Http {
         return axios.put(url, data, config)
     }
 
+
+    
+
     static setStorage(key, value) {
         localStorage.setItem(key, value)
     }

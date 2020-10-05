@@ -40,6 +40,10 @@ const router = new VueRouter({
 })
 
 router.beforeEach(async (to, from, next) => {
+
+    // 适配线上路径
+    if (to.path === '/manager') return next('/')
+
     // 首页
     if (from.path === to.path) {
         const res = await loginModel.verifyToken()

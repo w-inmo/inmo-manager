@@ -61,8 +61,8 @@
                 articleModel.getCategoryList(),
                 articleModel.getTagList()
             ]).then(values => {
-                values[0].forEach(v => this.cateOptions.push({ value: v, label: v }))
-                values[1].forEach(v => this.tagOptions.push({ value: v, label: v }))
+                values[0].data.forEach(v => this.cateOptions.push({ value: v, label: v }))
+                values[1].data.forEach(v => this.tagOptions.push({ value: v, label: v }))
             })
         },
         methods: {
